@@ -1,0 +1,18 @@
+micronaut:
+  application.name: langchain-java-demo
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://api.groq.com/openai/v1/
+      model-name: mixtral-8x7b-32768
+      temperature: 0.0
+      timeout: PT60S
+      log-requests: false
+      log-responses: false
+
+logging:
+  level:
+    dev.langchain4j: DEBUG
+    dev.ai4j.openai4j: DEBUG
